@@ -68,4 +68,3 @@ Remember: What happens before the next exercise?
 Remember: You know the drill.
 
 9. Pick another endpoint to be handled by the same app. At which points will your existing control flow need to change to accommodate this? Go through the steps of preparing input, performing the call and formatting output. Keep committing as you complete small steps toward this.
-   Collapse
