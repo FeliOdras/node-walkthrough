@@ -6,6 +6,7 @@ const removeWhitespace = input => {
 
 const capitalizeInitial = input => {
   let results = input.toLowerCase();
+  results = results.split(" ");
   console.log(results);
 };
-capitalizeInitial("this Is a senTence");
+capitalizeInitial("This Is a senTencE");
