@@ -7,6 +7,10 @@ const removeWhitespace = input => {
 const capitalizeInitial = input => {
   let results = input.toLowerCase();
   results = results.split(" ");
+  for (let i = 0; i < results.length; i++) {
+    results[i] = results[i][0].toUpperCase() + results[i].slice(1);
+  }
+
   console.log(results);
 };
 capitalizeInitial("This Is a senTencE");
