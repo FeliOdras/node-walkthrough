@@ -1,2 +1,5 @@
 const args = process.argv.slice(2);
-console.log(args);
+
+if (args.includes("--help")) {
+  console.log(true);
+}
