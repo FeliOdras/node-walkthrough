@@ -13,4 +13,3 @@ const capitalizeInitial = input => {
   results = results.join(" ");
   console.log(results);
 };
-capitalizeInitial("This Is a senTencE");
