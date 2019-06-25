@@ -3,4 +3,3 @@ const removeWhitespace = input => {
   results = results.replace(/\s+/g, " ");
   console.log(results);
 };
-removeWhitespace("   sao   Tome  ");
