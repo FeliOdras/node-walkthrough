@@ -1,7 +1,7 @@
 const removeWhitespace = input => {
   let results = input.trim();
   results = results.replace(/\s+/g, " ");
-  console.log(results);
+  return results;
 };
 
 const capitalizeInitial = input => {
@@ -13,3 +13,4 @@ const capitalizeInitial = input => {
   results = results.join(" ");
   console.log(results);
 };
+capitalizeInitial("ThIs iS a TEst");
