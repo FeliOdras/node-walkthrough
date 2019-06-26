@@ -1,11 +1,39 @@
 const args = process.argv.slice(2);
 const { showHelp } = require("./messaging");
 const { prepareString } = require("./formatting");
+const { getTimeData } = require("./lib/client");
 
 if (args.includes("--help")) {
   showHelp();
 }
 
-//result = prepareString(args[0]);
+if (args.includes("--option")) {
+  getTimeData()
+    .then(data => {
+      return data.reduce((acc, curr) => {
+        const [area, city] = curr.split("/");
+        acc.push({ area, city });
+        return acc;
+      }, []);
+    })
+    .then(data => {
+      data.forEach(entry => {
+        console.log(entry);
+      });
+      process.exit();
+    });
+}
 
-prepareString("  THis    iS    A   teST  ");
+getTimeData(args[0], args[1]).then(data => {
+  switch (args[2]) {
+    case "--unix":
+      return console.log(data["unixtime"]);
+    case "--currentWeek":
+      return console.log(data["week_number"]);
+    case "--dayOfTheYear":
+      return console.log(data["day_of_year"]);
+    default:
+      return console.log(data["utc_datetime"]);
+  }
+  process.exit();
+});
