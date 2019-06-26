@@ -1,7 +1,6 @@
 exports.prepareString = input => {
   let results = removeWhitespace(input);
   results = capitalizeInitial(results);
-  console.log(results);
 };
 
 const removeWhitespace = input => {
@@ -16,6 +15,6 @@ const capitalizeInitial = input => {
   for (let i = 0; i < results.length; i++) {
     results[i] = results[i][0].toUpperCase() + results[i].slice(1);
   }
-  results = results.join('_');
+  results = results.join("_");
   return results;
 };
