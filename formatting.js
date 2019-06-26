@@ -1,3 +1,10 @@
+const prepareInput = input => {
+  let results = removeWhitespace(input);
+  results = capitalizeInitial(results);
+
+  console.log(results);
+};
+
 const removeWhitespace = input => {
   let results = input.trim();
   results = results.replace(/\s+/g, " ");
@@ -10,14 +17,8 @@ const capitalizeInitial = input => {
   for (let i = 0; i < results.length; i++) {
     results[i] = results[i][0].toUpperCase() + results[i].slice(1);
   }
-  results = results.join(" ");
+  results = results.join("_");
   return results;
-};
-
-const prepareInput = input => {
-  let results = removeWhitespace(input);
-
-  console.log(results);
 };
 
 prepareInput("   THis    iS    A   teST   ");
