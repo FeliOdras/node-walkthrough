@@ -11,6 +11,13 @@ const capitalizeInitial = input => {
     results[i] = results[i][0].toUpperCase() + results[i].slice(1);
   }
   results = results.join(" ");
+  return results;
+};
+
+const prepareInput = input => {
+  let results = removeWhitespace(input);
+
   console.log(results);
 };
-capitalizeInitial("ThIs iS a TEst");
+
+prepareInput("   THis    iS    A   teST   ");
