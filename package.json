@@ -1,0 +1,22 @@
+{
+  "name": "worldtime_cli",
+  "version": "1.0.0",
+  "description": "0. In a new file called `index.js` write a CLI application that accepts a user parameter and logs it to the console.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FeliOdras/node-walkthrough.git"
+  },
+  "author": "FeliOdras",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FeliOdras/node-walkthrough/issues"
+  },
+  "homepage": "https://github.com/FeliOdras/node-walkthrough#readme"
+}
