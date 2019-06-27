@@ -1,6 +1,5 @@
 const args = process.argv.slice(2);
 const { showHelp } = require("./messaging");
-const { prepareString } = require("./formatting");
 const { getTimeData } = require("./lib/client");
 
 if (args.includes("--help")) {
