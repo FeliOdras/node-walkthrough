@@ -36,19 +36,19 @@ getTimeData(args[0], args[1]).then(data => {
       return console.log(
         `It is week ${data["week_number"]} in ${prepareString(
           args[1]
-        )}/${prepareString(args[0])}`
+        )}/${prepareString(args[0])}.`
       );
     case "--dayOfTheYear":
       return console.log(
         `It is day ${data["day_of_year"]} of the year in ${prepareString(
           args[1]
-        )}/${prepareString(args[0])}`
+        )}/${prepareString(args[0])}.`
       );
     default:
       return console.log(
         `It is ${data["utc_datetime"]} in ${prepareString(
           args[1]
-        )}/${prepareString(args[0])}`
+        )}/${prepareString(args[0])}.`
       );
   }
   process.exit();
