@@ -21,7 +21,9 @@ if (args.includes("--help")) {
       process.exit();
     })
     .catch(err => {
-      console.log(`Something went wrong. \n ${err}`);
+      console.log(
+        `Something went wrong. \n Use --help for more information. \n ${err} `
+      );
     });
 } else {
   getTimeData(args[0], args[1]).then(data => {
