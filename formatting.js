@@ -1,6 +1,7 @@
 exports.prepareString = input => {
   let results = removeWhitespace(input);
   results = capitalizeInitial(results);
+  return results;
 };
 
 const removeWhitespace = input => {
